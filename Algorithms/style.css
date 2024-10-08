@@ -1,0 +1,314 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../space-art-simple-background-moon-space-wallpaper-preview.jpg'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 60px; /* Navbarın yüksekliği kadar boşluk ekliyoruz */
+}
+
+/* Başlık ve Form Stilleri */
+h1 {
+    color: #e74c3c;
+}
+
+label {
+    color: #f39c12;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #34495e;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 5px;
+    color: #ecf0f1;
+}
+
+/* Python Kodunu Gösterme Stili */
+.python-code {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #2ecc71;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* Navbar ve Diğer Stiller */
+.desktop-navbar {
+    display: none; /* Başlangıçta gizli */
+    background-color: #000; /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    border-bottom: 1px solid #333; /* Alt sınır */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Üstte görünmesi için */
+    text-align: center;
+}
+
+.desktop-navbar a {
+    color: whitesmoke; /* Link rengi */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px; /* Normal link font boyutu */
+    transition: color 1s;
+}
+
+.desktop-navbar .anasayfa {
+    font-size: 24px; /* Cosmic RenaScience font boyutu */
+    font-weight: bold;
+}
+
+.desktop-navbar a:hover {
+    color: aqua; /* Hover durumunda renk */
+    text-shadow: 0 0 10px aqua;
+}
+
+.mobile-navbar {
+    background-color: #000; /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    border-bottom: none; /* Alt sınır kaldırıldı */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    height: 8vh;
+}
+
+.mobile-navbar .menu-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.mobile-navbar .nav-links {
+    display: none; /* Başlangıçta gizli */
+    flex-direction: column; /* Dikey hizalama */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000; /* Arka plan rengi */
+    width: 100%;
+    padding: 0px; /* Padding sıfırlandı */
+    margin: 17px;
+    transform: translateX(-5%);
+}
+
+.mobile-navbar .nav-links.active {
+    display: flex; /* Menü açıldığında görünür */
+}
+
+.mobile-navbar .nav-links.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+.mobile-navbar .nav-links.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+.mobile-navbar .nav-links a {
+    color: whitesmoke; /* Link rengi */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 1s;
+    font-family: 'Poppins', sans-serif; /* Font ayarı */
+}
+
+.mobile-navbar .nav-links a:hover {
+    color: aqua; /* Hover durumunda renk */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0; /* Yukarıdan boşlukları kaldır */
+    padding: 0;
+}
+
+.content img {
+    max-width: 100%; /* Ekranın genişliğine göre ölçeklendirme */
+    height: auto; /* Yükseklik oranı korunacak */
+    object-fit: contain;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Alt tarafa hafif boşluk ekle */
+}
+
+.yazı {
+    background-color: rgba(128, 128, 128, 0.158); /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    padding: 20px;
+    margin: 100px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 75%; /* Maksimum genişlik */
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    border-top: 1px solid #333; /* Üst sınır */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a i {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover i {
+    color: aqua; /* Hover durumunda renk */
+    text-shadow: 0 0 4px aqua;
+}
+
+/* Responsive tasarım */
+@media (min-width: 768px) {
+    .mobile-navbar {
+        display: none; /* Bilgisayarda gizle */
+    }
+
+    .desktop-navbar {
+        display: block; /* Bilgisayarda göster */
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-navbar {
+        display: none; /* Mobilde gizle */
+    }
+
+    .mobile-navbar {
+        display: block; /* Mobilde göster */
+    }
+}
+
+/* Cosmic RenaScience yazısı hover efekti (bilgisayar ve mobil) */
+.desktop-navbar .anasayfa:hover,
+.mobile-navbar .anasayfa:hover {
+    color: gray; /* Hover durumunda renk gri olacak */
+    text-shadow: 0 0 20px gray;
+}
+
+.mobile-navbar .anasayfa {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 21px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .content {
+        margin-top: 10%;
+    }
+
+    .content img {
+        width: 70%; /* Tablet ve bilgisayarda genişliği %70 olacak */
+    }
+}
+/* Description Textbox Stili */
+.description-textbox {
+    background-color: rgba(128, 128, 128, 0.158);
+    color: whitesmoke; /* Yazı rengi */
+    padding: 20px;
+    margin: 0 auto; /* Yukarıdaki boşluğu sıfırla */
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 80%; /* Genişlik sınırı */
+    text-align: center; /* Metni ortala */
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif; /* Aynı fontu kullan */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    margin-top: 0; /* Navbar ile arasında boşluk bırakma */
+    margin-bottom: 10px; /* Content ile arasındaki boşluğu ayarla */
+}
+
+@media (min-width: 768px) {
+    .description-textbox {
+        font-size: 20px; /* Daha büyük ekranlarda yazı boyutu */
+        max-width: 70%; /* Daha geniş alanlarda genişliği artır */
+    }
+
+    .content {
+        margin-top: 10px; /* Tablet ve bilgisayarda üst boşluk ekle */
+    }
+}

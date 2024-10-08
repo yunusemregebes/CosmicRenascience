@@ -1,0 +1,234 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../space-art-simple-background-moon-space-wallpaper-preview.jpg'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bilgisayar ve tablet için navbar */
+.desktop-navbar {
+    display: none; /* Başlangıçta gizli */
+    background-color: #000; /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    border-bottom: 1px solid #333; /* Alt sınır */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Üstte görünmesi için */
+    text-align: center;
+}
+
+.desktop-navbar a {
+    color: whitesmoke; /* Link rengi */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px; /* Normal link font boyutu */
+    transition: color 1s;
+    
+}
+
+.desktop-navbar .anasayfa {
+    font-size: 24px; /* Cosmic RenaScience font boyutu */
+    font-weight: bold;
+}
+
+.desktop-navbar a:hover {
+    color: aqua; /* Hover durumunda renk */
+    text-shadow: 0 0 10px aqua;
+}
+
+.mobile-navbar {
+    background-color: #000; /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    border-bottom: none; /* Alt sınır kaldırıldı */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    height: 8vh;
+}
+
+
+.mobile-navbar .menu-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+
+
+
+.mobile-navbar .nav-links {
+    display: none; /* Başlangıçta gizli */
+    flex-direction: column; /* Dikey hizalama */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000; /* Arka plan rengi */
+    width: 100%;
+    padding: 0px; /* Padding sıfırlandı */
+    margin: 17px;
+    transform: translateX(-5%);
+}
+
+.mobile-navbar .nav-links.active {
+    display: flex; /* Menü açıldığında görünür */
+}
+
+.mobile-navbar .nav-links.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+.mobile-navbar .nav-links.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+.mobile-navbar .nav-links a {
+    color: whitesmoke; /* Link rengi */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 1s;
+    font-family: 'Poppins', sans-serif; /* Font ayarı */
+}
+
+.mobile-navbar .nav-links a:hover {
+    color: aqua; /* Hover durumunda renk */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Yazının arka plan rengi */
+.content {
+    text-align: center; /* Ortalamak için */
+}
+
+.yazı {
+    background-color: rgba(128, 128, 128, 0.158); /* Arka plan rengi */
+    color: whitesmoke; /* Yazı rengi */
+    padding: 20px;
+    margin: 100px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 75%; /* Maksimum genişlik */
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    border-top: 1px solid #333; /* Üst sınır */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a i {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover i {
+    color: aqua; /* Hover durumunda renk */
+    text-shadow: 0 0 4px aqua;
+}
+
+/* Responsive tasarım */
+@media (min-width: 768px) {
+    .mobile-navbar {
+        display: none; /* Bilgisayarda gizle */
+    }
+
+    .desktop-navbar {
+        display: block; /* Bilgisayarda göster */
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-navbar {
+        display: none; /* Mobilde gizle */
+    }
+
+    .mobile-navbar {
+        display: block; /* Mobilde göster */
+    }
+}
+
+/* Cosmic RenaScience yazısı hover efekti (bilgisayar ve mobil) */
+.desktop-navbar .anasayfa:hover,
+.mobile-navbar .anasayfa:hover {
+    color: gray; /* Hover durumunda renk gri olacak */
+    text-shadow: 0 0 20px gray;
+}
+
+.mobile-navbar .anasayfa {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 21px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* PDF için kapsayıcı */
+.pdf-container {
+    width: 80%; /* PDF genişliği */
+    height: 80vh; /* PDF yüksekliği */
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    margin-top: calc(8vh + 20px); /* Navbar yüksekliğini ve biraz boşluk ekleyerek ortala */
+    background-color: transparent; /* Arka planı transparan yap */
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; 
+}
+
+

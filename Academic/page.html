@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../astronaut.png" type="image/x-icon">
+</head>
+<body class="body">
+   
+    <nav class="desktop-navbar">
+        <a class="anasayfa" href="../index.html">Cosmic RenaScience</a>
+        <a href="../Analysis/page.html" class="fade-link">Analysis</a>
+        <a href="../index2.html" class="fade-link">3D Map</a>
+        <a href="../Algorithms/page.html" class="fade-link">Algorithms</a>
+        <a href="../Academic/page.html" class="fade-link">Project Report</a>
+        <a href="../OurVision/page.html" class="fade-link">Our Vision</a>
+
+    </nav>
+
+   
+    <nav class="mobile-navbar">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="../Analysis/page.html" class="fade-link">Analysis</a>
+            <a href="../index2.html" class="fade-link">3D Map</a>
+            <a href="../Algorithms/page.html" class="fade-link">Algorithms</a>
+            <a href="../Academic/page.html" class="fade-link">Project Report</a>
+            <a href="../OurVision/page.html" class="fade-link">Our Vision</a>
+        </div>
+        <a class="anasayfa" href="../index.html">Cosmic RenaScience</a>
+    </nav>
+
+    <div class="content">
+        <div class="pdf-container">
+            <iframe src="https://docs.google.com/document/d/1VP3MPiL5FxbW2CvB9z8xuR1AsjmHytT228k37Kqinyo/preview"
+                    frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCpQKq3ZtjDXKqGsdiSU-baw"><i class="fa-brands fa-youtube"></i></a></li>
+<li><a href="https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/cosmic-renasciences1/?tab=details"><i class="fa-solid fa-link"></i></a></li>
+<li><a href="../ContacUs/page.html"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                
+                navLinks.classList.add('fade-out');
+                setTimeout(() => {
+                    navLinks.classList.remove('active', 'fade-out');
+                }, 500); 
+            } else {
+                
+                navLinks.classList.add('active', 'fade-in');
+                setTimeout(() => {
+                    navLinks.classList.remove('fade-in');
+                }, 500); 
+            }
+        });
+    </script>
+</body>
+</html>

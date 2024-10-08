@@ -1,0 +1,86 @@
+             <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Our Vision</title>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+                <link rel="icon" href="../astronaut.png" type="image/x-icon">
+            </head>
+            <body class="body">
+               
+                <nav class="desktop-navbar">
+                    <a class="anasayfa" href="../index.html">Cosmic RenaScience</a>
+                    <a href="../Analysis/page.html" class="fade-link">Analysis</a>
+                    <a href="../index2.html" class="fade-link">3D Map</a>
+                    <a href="../Algorithms/page.html" class="fade-link">Algorithms</a>
+                    <a href="../Academic/page.html" class="fade-link">Project Report</a>
+                    <a href="../OurVision/page.html" class="fade-link">Our Vision</a>
+      
+                </nav>
+            
+               
+                <nav class="mobile-navbar">
+                    <div class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="nav-links">
+                        <a href="../Analysis/page.html" class="fade-link">Analysis</a>
+                    <a href="../index2.html" class="fade-link">3D Map</a>
+                    <a href="../Algorithms/page.html" class="fade-link">Algorithms</a>
+                    <a href="../Academic/page.html" class="fade-link">Project Report</a>
+                    <a href="../OurVision/page.html" class="fade-link">Our Vision</a>
+                   
+                    </div>
+                    <a class="anasayfa" href="../index.html">Cosmic RenaScience</a>
+                </nav>
+            
+                <div class="content">
+                    <p class="yazı">Our team is fully committed to maximizing the potential of the Habitable Worlds Observatory by concentrating on the discovery, mapping, and characterization of potentially habitable exoplanets within our galaxy. Our overarching mission is to develop the essential data, tools, and technologies that will enable humanity to identify new, viable homes as we extend our reach beyond Earth. As we stand on the cusp of profound advancements in space exploration, we recognize that the search for life in the universe is not merely a scientific pursuit but a vital step in ensuring the long-term survival of our species.
+
+                        By applying our deep scientific knowledge and pioneering approaches, we aim to contribute significantly to the quest for extraterrestrial life, targeting planets that show promise for supporting life as we know it. Our work, which involves the precise study and mapping of exoplanets, is designed to lay the foundation for future explorations that may one day lead humanity to establish colonies beyond our solar system.
+                        
+                        The Habitable Worlds Observatory represents a new era of exploration, where advanced telescopes and sophisticated technology allow us to scrutinize distant worlds with unprecedented detail. Our team is at the forefront of this effort, employing cutting-edge methods to analyze exoplanet atmospheres, surface conditions, and potential biosignatures—indicators that a planet could support life. Each planet we investigate brings us closer to answering some of the most fundamental questions about life in the universe: Are we alone? If not, where might life exist beyond Earth?
+                        
+                        Our research will inform not only the scientific community but also humanity as a whole, as we venture further into the cosmos. The potential of discovering habitable worlds and, possibly, extraterrestrial life, stands to transform our understanding of our place in the universe. This knowledge may one day guide future missions aimed at interstellar travel, making human settlement on distant planets a reality.
+                        
+                        Ultimately, our work bridges the gap between curiosity and survival. The pursuit of habitable worlds is more than a scientific endeavor—it is a reflection of our collective ambition to explore, thrive, and ensure the longevity of human civilization. As we continue to push the boundaries of what is possible, we remain steadfast in our commitment to advancing space exploration, and with every discovery, we edge closer to a future where humans may call multiple planets home. Through determination, innovation, and collaboration, we are poised to shape the next chapter of human history in the vast expanse of space.
+                        </p>
+                </div>
+            
+                <footer class="footer">
+                    <ul>
+                        <li><a href="https://www.youtube.com/channel/UCpQKq3ZtjDXKqGsdiSU-baw"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/cosmic-renasciences1/?tab=details"><i class="fa-solid fa-link"></i></a></li>
+            <li><a href="../ContacUs/page.html"><i class="fa-solid fa-phone"></i></a></li>
+                    </ul>
+                </footer>
+            
+                <script>
+                    
+                    const menuIcon = document.querySelector('.menu-icon');
+                    const navLinks = document.querySelector('.nav-links');
+            
+                    menuIcon.addEventListener('click', () => {
+                        if (navLinks.classList.contains('active')) {
+                            
+                            navLinks.classList.add('fade-out');
+                            setTimeout(() => {
+                                navLinks.classList.remove('active', 'fade-out');
+                            }, 500); 
+                        } else {
+                            
+                            navLinks.classList.add('active', 'fade-in');
+                            setTimeout(() => {
+                                navLinks.classList.remove('fade-in');
+                            }, 500); 
+                        }
+                    });
+                </script>
+            </body>
+            </html>
+            
